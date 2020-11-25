@@ -34,30 +34,30 @@ describe "Board" do
     end
   end
 
-  describe '#display' do
-    it 'prints the board' do
-      board.cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
+  # describe '#display' do
+  #   it 'prints the board' do
+  #     board.cells = ["X", "X", "X", "X", "O", "O", "X", "O", "O"]
 
-      output = capture_puts{ board.display }
+  #     output = capture_puts{ board.display }
 
-      expect(output).to include(" X | X | X ")
-      expect(output).to include("-----------")
-      expect(output).to include(" X | O | O ")
-      expect(output).to include("-----------")
-      expect(output).to include(" X | O | O ")
+  #     expect(output).to include(" X | X | X ")
+  #     expect(output).to include("-----------")
+  #     expect(output).to include(" X | O | O ")
+  #     expect(output).to include("-----------")
+  #     expect(output).to include(" X | O | O ")
 
 
-      board.cells = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
+  #     board.cells = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 
-      output = capture_puts{ board.display }
+  #     output = capture_puts{ board.display }
 
-      expect(output).to include(" X | O | X ")
-      expect(output).to include("-----------")
-      expect(output).to include(" O | X | X ")
-      expect(output).to include("-----------")
-      expect(output).to include(" O | X | O ")
-    end
-  end
+  #     expect(output).to include(" X | O | X ")
+  #     expect(output).to include("-----------")
+  #     expect(output).to include(" O | X | X ")
+  #     expect(output).to include("-----------")
+  #     expect(output).to include(" O | X | O ")
+  #   end
+  # end
 
   describe '#position' do
     it 'takes in user input and returns the value of the board cell' do
